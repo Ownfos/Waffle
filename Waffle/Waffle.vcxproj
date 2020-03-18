@@ -106,7 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Jeong HyunGi\C++ Libraries\boost_1_72_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libraries/boost_1_72_0;../libraries/imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -115,7 +115,7 @@
       <AdditionalLibraryDirectories>C:\Users\Jeong HyunGi\C++ Libraries\boost_1_72_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>C:\Users\Jeong HyunGi\C++ Libraries\boost_1_72_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dcompiler.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
@@ -171,6 +171,7 @@
     <ClInclude Include="ConstantBuffer.hpp" />
     <ClInclude Include="Context.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="ImGuiHelper.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputElement.h" />
     <ClInclude Include="InputLayout.h" />
@@ -189,11 +190,18 @@
     <ClInclude Include="Utility.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="VertexShader.h" />
+    <ClInclude Include="Waffle.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\libraries\imgui\examples\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\libraries\imgui\examples\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\libraries\imgui\imgui.cpp" />
+    <ClCompile Include="..\libraries\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\libraries\imgui\imgui_widgets.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Context.cpp" />
+    <ClCompile Include="ImGuiHelper.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="InputElement.cpp" />
     <ClCompile Include="InputLayout.cpp" />

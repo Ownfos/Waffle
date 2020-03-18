@@ -2,6 +2,8 @@
 
 #define CLASS_NAME L"class"
 
+extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 namespace waffle
 {
     std::unordered_map<HWND, Window*> Window::windows;
@@ -136,6 +138,9 @@ namespace waffle
 
 	LRESULT WINAPI Window::WindowProcedure(HWND handle, UINT message, WPARAM wParam, LPARAM lParam)
 	{
+		if (ImGui_ImplWin32_WndProcHandler(handle, message, wParam, lParam))
+			return true;
+
 		switch (message)
 		{
 			case WM_DESTROY:

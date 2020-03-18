@@ -48,8 +48,8 @@ namespace waffle
 	template<typename T>
 	void Mesh<T>::Draw()
 	{
-		auto stride = sizeof(T);
-		auto offset = 0U;
+		UINT stride = sizeof(T);
+		UINT offset = 0U;
 		context.DeviceContext()->IASetVertexBuffers(0, 1, vertexBuffer.GetAddressOf(), &stride, &offset);
 		context.DeviceContext()->IASetIndexBuffer(indexBuffer.Get(), DXGI_FORMAT_R32_UINT, 0);
 		context.DeviceContext()->IASetPrimitiveTopology(static_cast<D3D11_PRIMITIVE_TOPOLOGY>(topology));

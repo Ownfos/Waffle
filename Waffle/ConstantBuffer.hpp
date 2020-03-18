@@ -1,5 +1,7 @@
 #include "ConstantBuffer.h"
 
+#include <exception>
+
 namespace waffle
 {
 
