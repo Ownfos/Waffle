@@ -17,6 +17,10 @@
 
    * I assume that you are creating a project in this solution (the same one where Waffle is in),\
      so there will be no problem in locating required lib file
+     
+   * I just discovered that libraries/imgui is empty and github desktop doesn't commit and push\
+     those files! Until I find a solution, you should download the imgui repository and paste it\
+     inside the folder...
 
 ## Example1
  - This example project shows how to use ImGui with this library
