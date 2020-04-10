@@ -1,6 +1,6 @@
 # Waffle
 - Static library for easier use of DirectX11 and ImGui
-- Created with Visual Studio 2019 version 16.4.6, Boost library version 1.72.0, and ImGui
+- Created with Visual Studio 2019 version 16.5.3, Boost library version 1.72.0, and ImGui
 
 ## Required project settings:
  - C++ 17 as language standard
