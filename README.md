@@ -21,6 +21,16 @@
    * I just discovered that libraries/imgui is empty and github desktop doesn't commit and push\
      those files! Until I find a solution, you should download the imgui repository and paste it\
      inside the folder...
+     
+## Required project settings (using "Waffle Binary.zip"):
+ - download the zip file and unzip it
+ - install boost (both x86, x64) and imgui using vcpkg\
+   or manually download and add their root directories ("boost_1_72_0", "imgui")\
+   to "additional include directory"
+ - add "Waffle Binary/include" as "additional include directory"
+ - add "Waffle Binary/lib" as "additional library directory"
+ - set corresponding .lib file as "additional dependencies" for your project configuration\
+   (e.g. "Waffle_x86_debug.lib" for x86, debug) 
 
 ## Example1
  - This example project shows how to use ImGui with this library
